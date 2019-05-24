@@ -1,4 +1,4 @@
-package org.bnp.is.model.info;
+package org.bnp.is.model.field;
 
 public class Contact {
 

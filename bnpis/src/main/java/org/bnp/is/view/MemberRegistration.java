@@ -14,57 +14,45 @@ import org.eclipse.swt.widgets.Shell;
 
 public class MemberRegistration {
 
-    private Display display;
-
-    private Shell shell;
-
-    private static MemberRegistration instance = new MemberRegistration();
-
-    private SuggestiveText classNoTxt;
-
-    private SuggestiveText lastNameTxt;
-
-    private SuggestiveText firstNameTxt;
-
-    private SuggestiveText middleNameTxt;
-
-    private SuggestiveText addressTxt;
-
-    private SuggestiveText cityTxt;
-
-    private SuggestiveText stateTxt;
-
-    private SuggestiveText zipTxt;
-
-    private SuggestiveText homePhoneTxt;
-
-    private SuggestiveText workPhoneTxt;
-
-    private SuggestiveText cellularTxt;
-
-    private SuggestiveText emailTxt;
-
-    private DateTime bdayTxt;
-
-    private SuggestiveText ageTxt;
+    private Combo educationTxt;
 
     private Combo genderTxt;
 
     private Combo maritalStatusTxt;
 
-    private Combo educationTxt;
+    private DateTime bdayTxt;
+
+    private Display display;
+
+    private static MemberRegistration instance = new MemberRegistration();
+
+    private Shell shell;
+
+    private SuggestiveText ageTxt;
+
+    private SuggestiveText addressTxt;
+
+    private SuggestiveText cellularTxt;
+
+    private SuggestiveText cityTxt;
+
+    private SuggestiveText emailTxt;
+
+    private SuggestiveText firstNameTxt;
+
+    private SuggestiveText homePhoneTxt;
+
+    private SuggestiveText lastNameTxt;
+
+    private SuggestiveText middleNameTxt;
 
     private SuggestiveText religionTxt;
 
-    private SuggestiveText parishTxt;
+    private SuggestiveText stateTxt;
 
-    private SuggestiveText parishAddressTxt;
+    private SuggestiveText workPhoneTxt;
 
-    private SuggestiveText parishCityTxt;
-
-    private SuggestiveText parishStateTxt;
-
-    private SuggestiveText parishZipTxt;
+    private SuggestiveText zipTxt;
 
     private MemberRegistration() {
         init();
@@ -110,19 +98,6 @@ public class MemberRegistration {
 
         RowData plabelrd = new RowData();
         plabelrd.width = 95;
-
-        // Class number
-        composite = new Composite(shell, SWT.NONE);
-        composite.setLayout(clayout);
-
-        label = new Label(composite, SWT.NONE);
-        label.setText("Class Number:");
-        label.setLayoutData(labelrd);
-
-        rd = new RowData();
-        rd.width = 50;
-        classNoTxt = new SuggestiveText(composite, SWT.BORDER, "#");
-        classNoTxt.setLayoutData(rd);
 
         // Name
         composite = new Composite(shell, SWT.NONE);
@@ -245,7 +220,7 @@ public class MemberRegistration {
         label.setLayoutData(labelrd);
 
         rd = new RowData();
-        rd.width = 150;
+        rd.width = 100;
         bdayTxt = new DateTime(composite, SWT.BORDER);
         bdayTxt.setLayoutData(rd);
 
@@ -313,53 +288,6 @@ public class MemberRegistration {
         rd.width = 300;
         religionTxt = new SuggestiveText(composite, SWT.BORDER, "Religion");
         religionTxt.setLayoutData(rd);
-
-        composite = new Composite(parent, SWT.NONE);
-        composite.setLayout(clayout);
-
-        label = new Label(composite, SWT.NONE);
-        label.setText("Parish:");
-        label.setLayoutData(plabelrd);
-
-        rd = new RowData();
-        rd.width = 475;
-        parishTxt = new SuggestiveText(composite, SWT.BORDER, "Parish");
-        parishTxt.setLayoutData(rd);
-
-        // Parish Address
-        composite = new Composite(parent, SWT.NONE);
-        composite.setLayout(clayout);
-
-        label = new Label(composite, SWT.NONE);
-        label.setText("Address:");
-        label.setLayoutData(plabelrd);
-
-        rd = new RowData();
-        rd.width = 475;
-        parishAddressTxt = new SuggestiveText(composite, SWT.BORDER, "Address");
-        parishAddressTxt.setLayoutData(rd);
-
-        // Parish Address 2nd line
-        composite = new Composite(parent, SWT.NONE);
-        composite.setLayout(clayout);
-
-        label = new Label(composite, SWT.NONE);
-        label.setLayoutData(plabelrd);
-
-        rd = new RowData();
-        rd.width = 250;
-        parishCityTxt = new SuggestiveText(composite, SWT.BORDER, "City");
-        parishCityTxt.setLayoutData(rd);
-
-        rd = new RowData();
-        rd.width = 95;
-        parishStateTxt = new SuggestiveText(composite, SWT.BORDER, "State / Province");
-        parishStateTxt.setLayoutData(rd);
-
-        rd = new RowData();
-        rd.width = 100;
-        parishZipTxt = new SuggestiveText(composite, SWT.BORDER, "Zip");
-        parishZipTxt.setLayoutData(rd);
     }
 
 

@@ -1,43 +1,33 @@
-package org.bnp.is.model.info;
+package org.bnp.is.model.field;
 
 import org.bnp.is.util.StringUtil;
 
 public class Address {
 
-    private String address1;
-
-    private String address2;
-
-    private String state;
+    private String street;
 
     private String city;
+
+    private String state;
 
     private String country;
 
     private Integer zip;
 
     public Address() {
-        address1 = null;
-        address2 = null;
+        street = null;
         city = null;
+        state = null;
         country = null;
         zip = null;
     }
 
-    public String getAddress1() {
-        return address1;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress1(String address1) {
-        this.address1 = address1;
-    }
-
-    public String getAddress2() {
-        return address2;
-    }
-
-    public void setAddress2(String address2) {
-        this.address2 = address2;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
     public String getState() {
@@ -75,13 +65,8 @@ public class Address {
     public String toString() {
         StringBuilder address = new StringBuilder();
 
-        if (!StringUtil.isNullOrEmpty(address1)) {
-            address.append(address1);
-            address.append(", ");
-        }
-
-        if (!StringUtil.isNullOrEmpty(address2)) {
-            address.append(address2);
+        if (!StringUtil.isNullOrEmpty(this.street)) {
+            address.append(this.street);
             address.append(", ");
         }
 

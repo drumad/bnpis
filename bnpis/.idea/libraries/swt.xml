@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="swt-win64-3.6.2">
+  <library name="swt">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/swt.jar!/" />
     </CLASSES>
